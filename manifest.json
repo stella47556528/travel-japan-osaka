@@ -1,0 +1,21 @@
+{
+"name": "2026 大阪五日遊行程表",
+"short_name": "大阪行程",
+"description": "2026/02/26 - 03/02 大阪五日遊詳細行程規劃",
+"start_url": "./osaka_itinerary.html",
+"display": "standalone",
+"background_color": "#ffffff",
+"theme_color": "#ef4444",
+"icons": [
+{
+"src": "https://www.google.com/search?q=https://cdn-icons-png.flaticon.com/512/192/192442.png",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "https://www.google.com/search?q=https://cdn-icons-png.flaticon.com/512/512/512391.png",
+"sizes": "512x512",
+"type": "image/png"
+}
+]
+}
