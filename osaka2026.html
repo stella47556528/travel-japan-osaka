@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 大阪五日遊：新世界、梅田與動漫尋寶之旅</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ef4444">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="大阪行程">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/192/192442.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -34,6 +43,10 @@
             background-color: #fef2f2;
             border-left: 4px solid #ef4444;
         }
+        /* PWA Install Button Styling */
+        #install-btn {
+            display: none;
+        }
     </style>
 </head>
 <body class="pb-10">
@@ -43,11 +56,15 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-2xl font-bold">🏮 2026 大阪五日遊行程 🏮</h1>
             <p class="text-sm mt-1 opacity-90">新世界霓虹、梅田血拚、喬巴尋寶與高空夜景</p>
+            <!-- Install Button -->
+            <button id="install-btn" class="mt-3 bg-white text-red-600 px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                📥 安裝行程 App
+            </button>
         </div>
     </header>
 
     <!-- Navigation Tabs -->
-    <div class="bg-white shadow-md sticky top-[76px] z-40">
+    <div class="bg-white shadow-md sticky top-[108px] z-40">
         <div class="flex overflow-x-auto no-scrollbar justify-start md:justify-center p-2 gap-2">
             <button onclick="showDay(1)" id="btn-1" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 1</button>
             <button onclick="showDay(2)" id="btn-2" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 2</button>
@@ -418,6 +435,38 @@
         window.onload = function() {
             showDay(1);
         };
+
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('SW Registered!', reg))
+                .catch(err => console.log('SW Reg error', err));
+            });
+        }
+
+        // PWA Install Prompt Logic
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-btn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'inline-block';
+        });
+
+        installBtn.addEventListener('click', () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                    installBtn.style.display = 'none';
+                });
+            }
+        });
     </script>
 </body>
 </html>
