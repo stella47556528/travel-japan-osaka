@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 大阪五日遊：新世界、梅田與動漫尋寶之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+        }
+        .day-content { display: none; }
+        .day-content.active { display: block; }
+        .tab-active { 
+            background-color: #ef4444 !important; 
+            color: white !important;
+            border-bottom: 4px solid #b91c1c;
+        }
+        .time-badge {
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .note-card {
+            border-left: 4px solid #3b82f6;
+            background-color: #eff6ff;
+        }
+        .beef-free {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+        }
+    </style>
+</head>
+<body class="pb-10">
+
+    <!-- Header -->
+    <header class="bg-red-600 text-white py-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-2xl font-bold">🏮 2026 大阪五日遊行程 🏮</h1>
+            <p class="text-sm mt-1 opacity-90">新世界霓虹、梅田血拚、喬巴尋寶與高空夜景</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="bg-white shadow-md sticky top-[76px] z-40">
+        <div class="flex overflow-x-auto no-scrollbar justify-start md:justify-center p-2 gap-2">
+            <button onclick="showDay(1)" id="btn-1" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 1</button>
+            <button onclick="showDay(2)" id="btn-2" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 2</button>
+            <button onclick="showDay(3)" id="btn-3" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 3</button>
+            <button onclick="showDay(4)" id="btn-4" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 4</button>
+            <button onclick="showDay(5)" id="btn-5" class="tab-btn px-4 py-2 rounded-lg font-medium text-gray-600 bg-gray-100 whitespace-nowrap">Day 5</button>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 mt-6 max-w-3xl">
+
+        <!-- Day 1 -->
+        <div id="day-1" class="day-content">
+            <h2 class="text-xl font-bold text-red-600 mb-4 border-b-2 border-red-200 pb-2">🗓️ 2026/02/26 (四) — 啟程：新世界霓虹與炸串饗宴</h2>
+            
+            <div class="space-y-6">
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">11:40</span>
+                        <h3 class="font-bold">✈️ 抵達：關西國際機場 (KIX)</h3>
+                    </div>
+                    <div class="note-card p-3 rounded-lg text-sm mt-2">
+                        <p class="font-bold text-blue-700">📌 My Notes:</p>
+                        <ul class="list-disc ml-4 mt-1 text-gray-700">
+                            <li>截圖 Visit Japan Web QR Code</li>
+                            <li>南海電鐵劃位、領取大阪周遊卡</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">13:05</span>
+                        <h3 class="font-bold">🚆 南海電鐵 特急 Rapi:t</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">深藍色鋼鐵人車頭與圓窗設計。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">13:50</span>
+                        <h3 class="font-bold">🏨 飯店 Check-in</h3>
+                    </div>
+                    <p class="text-sm font-medium">Grandi Ebisuhonmachi</p>
+                    <p class="text-xs text-gray-500 mt-1">📍 新今宮站西出口步行 2 分鐘</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">14:20</span>
+                        <h3 class="font-bold">🍣 餐廳：六鮮 通天閣本店</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">推薦：特選握壽司盛合、茶碗蒸。預算：3,500円。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">15:30</span>
+                        <h3 class="font-bold">🗼 通天閣 (TOWER SLIDER)</h3>
+                    </div>
+                    <div class="bg-green-50 p-2 rounded text-xs text-green-700 font-bold mb-2">🎟️ 周遊卡免費：TOWER SLIDER (限平日)</div>
+                    <p class="text-sm text-gray-600">必玩：大型溜滑梯、觸摸比利肯神腳底。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">18:00</span>
+                        <h3 class="font-bold">📸 新世界商店街霓虹散策</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">必拍巨大河豚與通天閣合影。逛 JanJan 橫丁與 MEGA 唐吉訶德。</p>
+                    <div class="beef-free p-3 rounded-lg text-sm mt-2">
+                        <p class="font-bold text-red-700">😋 無牛小吃：</p>
+                        <p>千成屋珈琲 (綜合果汁)、本家大たこ (章魚燒)</p>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">19:30</span>
+                        <h3 class="font-bold">🍢 晚餐：八重勝炸串</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">無牛推薦：炸豬排串、雞肉串、炸蝦。預算：3,000円。</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div id="day-2" class="day-content">
+            <h2 class="text-xl font-bold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">🗓️ 2026/02/27 (五) — 大阪周遊卡：梅花、鰻魚與夜景</h2>
+            
+            <div class="space-y-6">
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">08:00</span>
+                        <h3 class="font-bold">🏯 前往大阪城公園</h3>
+                    </div>
+                    <p class="text-xs text-gray-500">地鐵谷町四丁目站 9 號出口</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">09:15</span>
+                        <h3 class="font-bold">🛶 大阪城天守閣 & 御座船</h3>
+                    </div>
+                    <div class="bg-green-50 p-2 rounded text-xs text-green-700 font-bold mb-2">🎟️ 周遊卡免費：御座船、天守閣</div>
+                    <p class="text-sm text-gray-700 font-bold text-pink-600">🌸 必看：梅林賞梅 (二月底盛開期)</p>
+                    <div class="note-card p-3 rounded-lg text-sm mt-2">
+                        <p class="font-bold text-blue-700">📌 策略：</p>
+                        <p>09:15 排隊領預約券 -> 衝天守閣 -> 回來搭船 -> 逛梅林</p>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">12:45</span>
+                        <h3 class="font-bold">🍱 餐廳：鰻魚處 美味美</h3>
+                    </div>
+                    <div class="beef-free p-2 rounded text-xs text-red-700 font-bold">完全無牛肉</div>
+                    <p class="text-sm mt-1">預算：2,500 - 4,000円。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">15:00</span>
+                        <h3 class="font-bold">🎡 天保山海灣區</h3>
+                    </div>
+                    <div class="bg-green-50 p-2 rounded text-xs text-green-700 font-bold">🎟️ 周遊卡免費：聖瑪麗亞號、天保山摩天輪</div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">17:15</span>
+                        <h3 class="font-bold">🚤 道頓堀水上觀光船</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">先到唐吉訶德下方換預約券（預約 20:00 班次）。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">17:40</span>
+                        <h3 class="font-bold">🍲 晚餐：Shabuwara 涮涮鍋</h3>
+                    </div>
+                    <p class="text-sm text-gray-700 font-bold text-red-600">🥘 無牛推薦：國產豬肉一人一鍋</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div id="day-3" class="day-content">
+            <h2 class="text-xl font-bold text-yellow-600 mb-4 border-b-2 border-yellow-200 pb-2">🗓️ 2026/02/28 (六) — 梅田：血拼購物與空中漫步</h2>
+            
+            <div class="space-y-6">
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">09:00</span>
+                        <h3 class="font-bold">🐟 黑門市場海鮮早午餐</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">現剖干貝、海膽、烤鰻魚。無牛安全區。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">11:30</span>
+                        <h3 class="font-bold">🛸 梅田動漫尋寶：第一站</h3>
+                    </div>
+                    <div class="border-l-4 border-yellow-400 pl-3">
+                        <p class="text-sm font-bold">✨ 扭蛋之森 梅田茶屋町店</p>
+                        <p class="text-xs text-gray-500">獨立店面，搜尋喬巴與稀有扭蛋。</p>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">12:45</span>
+                        <h3 class="font-bold">🎡 HEP FIVE 購物</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">JUMP SHOP (7F)：官方海賊王週邊、喬巴新品。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">14:00</span>
+                        <h3 class="font-bold">💄 LUCUA & LUCUA 1100</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">@cosme、lululemon、3COINS。統一退稅 (4F)。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">15:30</span>
+                        <h3 class="font-bold">🥣 梅田無牛午餐推薦</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-orange-50 p-2 rounded">
+                            <p class="font-bold">銀座篝 (LUCUA)</p>
+                            <p>招牌雞白湯 (無牛)</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded">
+                            <p class="font-bold">北極星蛋包飯 (大丸)</p>
+                            <p>雞肉蛋包飯 + 番茄醬</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">17:45</span>
+                        <h3 class="font-bold">🌅 梅田藍天大廈空中庭園</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">17:35 前登樓看夕陽，隨後看螢光石步道。</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div id="day-4" class="day-content">
+            <h2 class="text-xl font-bold text-purple-600 mb-4 border-b-2 border-purple-200 pb-2">🗓️ 2026/03/01 (日) — 心齋橋動漫與阿倍野高空夜景</h2>
+            
+            <div class="space-y-6">
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">10:00</span>
+                        <h3 class="font-bold">🍰 HARBS 大丸心齋橋店</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">準時開門進店，必吃「水果千層蛋糕」。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">11:45</span>
+                        <h3 class="font-bold">👒 心齋橋 PARCO 6F</h3>
+                    </div>
+                    <p class="text-sm text-gray-700 font-bold">喬巴官方店：海賊王麥草商店。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">13:30</span>
+                        <h3 class="font-bold">👺 難波八阪神社</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">巨大「獅子頭」拍照，吸走厄運！</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">14:30</span>
+                        <h3 class="font-bold">🥩 京都勝牛 難波店</h3>
+                    </div>
+                    <p class="text-sm text-red-600 font-bold">🚫 無牛點法：炸里肌豬排 / 炸腰內豬排定食</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">15:45</span>
+                        <h3 class="font-bold">🎮 日本橋電器街 (Denden Town)</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">喬巴深度挖寶聖地：Jungle、羅針盤 (二手店)。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">17:45</span>
+                        <h3 class="font-bold">🌃 阿倍野 Harukas 300</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">大阪最高點，看日落接璀璨夜景。</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div id="day-5" class="day-content">
+            <h2 class="text-xl font-bold text-green-600 mb-4 border-b-2 border-green-200 pb-2">🗓️ 2026/03/02 (一) — 木津市場與賦歸</h2>
+            
+            <div class="space-y-6">
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">07:00</span>
+                        <h3 class="font-bold">🍱 木津卸売市場</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">早餐：魚市食堂 (海鮮丼) 或 まるよし (握壽司)。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">09:15</span>
+                        <h3 class="font-bold">🚨 最後期限：離開飯店</h3>
+                    </div>
+                    <div class="note-card p-3 rounded-lg text-sm mt-2">
+                        <p class="font-bold text-blue-700">🚆 南海電鐵 Rapi:t 選位技巧：</p>
+                        <p>優先選 1-2 車廂、右側 (A/B 排) 看海景。</p>
+                    </div>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">09:32</span>
+                        <h3 class="font-bold">🚆 特急 Rapi:t α 15</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">新今宮 ➔ 關西機場 (10:10 抵達)。</p>
+                </section>
+
+                <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="time-badge">12:45</span>
+                        <h3 class="font-bold">🛫 CI157 班機起飛</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">帶著滿滿回憶與喬巴戰利品回家！</p>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Summary Table -->
+    <footer class="mt-10 container mx-auto px-4 max-w-3xl">
+        <div class="bg-gray-800 text-white p-6 rounded-2xl shadow-xl">
+            <h4 class="text-lg font-bold mb-4">🛍️ 購物 & 退稅彙整表</h4>
+            <div class="overflow-x-auto text-xs">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-700">
+                        <tr>
+                            <th class="p-2">地點</th>
+                            <th class="p-2">5% 優惠領取</th>
+                            <th class="p-2">10% 退稅處</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700">
+                        <tr>
+                            <td class="p-2 font-bold">大丸百貨</td>
+                            <td class="p-2">1F 服務台</td>
+                            <td class="p-2">5F 退稅櫃檯</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 font-bold">LUCUA</td>
+                            <td class="p-2">無</td>
+                            <td class="p-2">LUCUA 1100 4F</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 font-bold">阿倍野近鐵</td>
+                            <td class="p-2">1F 服務台</td>
+                            <td class="p-2">翼館 3.5F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showDay(dayNum) {
+            // Hide all content
+            const contents = document.querySelectorAll('.day-content');
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // Show selected day
+            document.getElementById('day-' + dayNum).classList.add('active');
+            
+            // Update Tab Style
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(t => t.classList.remove('tab-active'));
+            document.getElementById('btn-' + dayNum).classList.add('tab-active');
+
+            // Scroll to top of content
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize to Day 1
+        window.onload = function() {
+            showDay(1);
+        };
+    </script>
+</body>
+</html>
