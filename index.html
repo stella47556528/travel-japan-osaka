@@ -609,17 +609,21 @@
 
     </main>
 
-    <!-- 圖片彈出視窗 -->
-    <div id="imageModal">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img class="modal-content" src="https://bobby.tw/wp-content/uploads/2023/10/20231023223015_9.jpg" alt="黑門市場地圖" onerror="this.src='https://via.placeholder.com/800x1200?text=地圖加載失敗'">
+   <!-- 圖片彈出視窗 (核心修正) -->
+    <div id="imageModal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" src="https://bobby.tw/wp-content/uploads/2023/10/20231023223015_9.jpg" alt="黑門市場地圖" referrerpolicy="no-referrer" onclick="event.stopPropagation()">
     </div>
 
-    <!-- Navigation JS -->
+    <!-- Navigation & Modal JS -->
     <script>
         function showDay(dayNum) {
-            document.querySelectorAll('.day-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.day-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
             document.getElementById('day' + dayNum).classList.remove('hidden');
+            document.getElementById('day' + dayNum).classList.add('block');
             
             document.querySelectorAll('.day-tab').forEach(tab => {
                 tab.classList.remove('active', 'bg-white', 'text-blue-600');
@@ -631,13 +635,15 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Modal 邏輯
+        // Modal 邏輯 (修正顯示問題)
         function openModal() {
-            document.getElementById('imageModal').style.display = "block";
-            document.body.style.overflow = "hidden";
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // 避免主頁滾動
         }
         function closeModal() {
-            document.getElementById('imageModal').style.display = "none";
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "none";
             document.body.style.overflow = "auto";
         }
     </script>
