@@ -651,7 +651,7 @@
    <!-- 圖片彈出視窗 (核心修正) -->
     <div id="imageModal" onclick="closeModal()">
         <span class="close-modal">&times;</span>
-        <img class="modal-content" src="https://bobby.tw/wp-content/uploads/2023/10/20231023223015_9.jpg" alt="黑門市場地圖" referrerpolicy="no-referrer" onclick="event.stopPropagation()">
+        <img class="modal-content" src="https://bobbyfun.tw/wp-content/uploads/pixnet/65406b33d84e23910957902baac7a817.jpg" alt="黑門市場地圖" referrerpolicy="no-referrer" onclick="event.stopPropagation()">
     </div>
 
     <!-- Navigation & Modal JS -->
@@ -676,13 +676,11 @@
 
         // Modal 邏輯 (修正顯示問題)
         function openModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = "flex";
-            document.body.style.overflow = "hidden"; // 避免主頁滾動
+            document.getElementById('imageModal').style.display = "flex";
+            document.body.style.overflow = "hidden";
         }
         function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = "none";
+            document.getElementById('imageModal').style.display = "none";
             document.body.style.overflow = "auto";
         }
     </script>
