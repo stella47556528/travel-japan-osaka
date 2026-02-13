@@ -29,30 +29,41 @@
         #imageModal {
             display: none;
             position: fixed;
-            z-index: 100;
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            overflow-y: auto;
+            background-color: rgba(0,0,0,0.95);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
         }
         .modal-content {
             margin: auto;
             display: block;
             width: 95%;
-            max-width: 800px;
-            padding: 20px 0;
+            max-width: 900px;
+            height: auto;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            animation: zoomIn 0.3s ease;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         .close-modal {
             position: fixed;
-            top: 15px;
+            top: 20px;
             right: 25px;
             color: white;
-            font-size: 40px;
+            font-size: 45px;
             font-weight: bold;
             cursor: pointer;
-            z-index: 101;
+            z-index: 1001;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -61,21 +72,20 @@
     <!-- Header & Navigation -->
     <header class="bg-blue-600 text-white shadow-lg sticky-nav">
         <div class="max-w-4xl mx-auto p-4">
-            <h1 class="text-xl font-bold flex items-center text-white">
+            <h1 class="text-xl font-bold flex items-center">
                 <span class="mr-2">🇯🇵</span> 2026 大阪冬日五日遊
             </h1>
             <div class="flex space-x-2 mt-4 overflow-x-auto scrollbar-hide py-1">
-                <button onclick="showDay(1)" id="tab1" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm whitespace-nowrap transition-all shadow-sm font-bold">D1 啟程新世界</button>
-                <button onclick="showDay(2)" id="tab2" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm whitespace-nowrap transition-all font-bold">D2 大阪周遊卡</button>
-                <button onclick="showDay(3)" id="tab3" class="day-tab active px-4 py-2 rounded-full bg-white/20 text-sm whitespace-nowrap transition-all shadow-sm font-bold">D3 梅田購物</button>
-                <button onclick="showDay(4)" id="tab4" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm whitespace-nowrap transition-all font-bold">D4 動漫景點</button>
-                <button onclick="showDay(5)" id="tab5" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm whitespace-nowrap transition-all font-bold">D5 賦歸之旅</button>
+                <button onclick="showDay(1)" id="tab1" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D1 啟程</button>
+                <button onclick="showDay(2)" id="tab2" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D2 周遊卡</button>
+                <button onclick="showDay(3)" id="tab3" class="day-tab active px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D3 梅田</button>
+                <button onclick="showDay(4)" id="tab4" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D4 動漫</button>
+                <button onclick="showDay(5)" id="tab5" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D5 賦歸</button>
             </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto p-4 pb-24 text-slate-800">
-
                <!-- DAY 1: 啟程 -->
         <section id="day1" class="day-content block">
             <div class="relative space-y-8 pl-8 timeline-line">
