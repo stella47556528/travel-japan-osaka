@@ -74,7 +74,7 @@
                 <span class="mr-2">🇯🇵</span> 2026 大阪冬日五日遊
             </h1>
             <div class="flex space-x-2 mt-4 overflow-x-auto scrollbar-hide py-1">
-               <button onclick="showDay('summary')" id="tab-summary" class="day-tab active px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">總覽</button>																																														  
+                <button onclick="showDay('summary')" id="tab-summary" class="day-tab active px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">總覽</button>																																														  
                 <button onclick="showDay(1)" id="tab1" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D1 啟程</button>
                 <button onclick="showDay(2)" id="tab2" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D2 周遊卡</button>
                 <button onclick="showDay(3)" id="tab3" class="day-tab px-4 py-2 rounded-full bg-white/20 text-sm font-bold transition-all shadow-sm">D3 梅田</button>
@@ -89,101 +89,101 @@
         <!-- 總覽分頁 (Summary Page) -->
         <section id="day-summary" class="day-content block">
             <!-- 大阪旅遊地圖連結 -->
-            <div class="mb-6">
+            <div class="mb-6 text-slate-800">
                 <a href="https://www.google.com/maps/d/edit?mid=1l3Qyt-Kx28DkBDbLQjRtjYa7kjkv0yk&usp=sharing" target="_blank" class="flex items-center justify-center w-full bg-red-500 hover:bg-red-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform active:scale-95">
                     <span class="mr-2 text-2xl">🗺️</span> 開啟 Google 大阪旅遊地圖
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 gap-4">
+            <div class="grid grid-cols-1 gap-4 text-slate-800">
                 <!-- Day 1 Summary -->
                 <div onclick="showDay(1)" class="bg-white p-5 rounded-2xl shadow-sm border-l-8 border-pink-400 cursor-pointer hover:shadow-md transition-all">
-																															  
-																										
-																																											  
-																																																																																																							
-							
+								 
+						  
+											 
+																									   
+	   
                     <div class="flex justify-between items-center mb-2">
-																   
-                        <span class="text-pink-500 font-bold">Day 1: 02/26 (四)</span>
-							  
-																				  
+				   
+                        <span class="text-pink-500 font-bold text-slate-800">Day 1: 02/26 (四)</span>
+		 
+					  
                         <span class="text-xs text-slate-400">點擊查看詳情 ></span>
-																																																			  
+													 
                     </div>
-                    <h4 class="font-bold text-lg mb-1">啟程：新世界霓虹與炸串 🏮</h4>
+                    <h4 class="font-bold text-lg mb-1 text-slate-800">啟程：新世界霓虹與炸串 🏮</h4>
                     <p class="text-sm text-slate-500">新今宮飯店入住、通天閣溜滑梯、八重勝炸串。</p>
                 </div>
 
                 <!-- Day 2 Summary -->
                 <div onclick="showDay(2)" class="bg-white p-5 rounded-2xl shadow-sm border-l-8 border-blue-400 cursor-pointer hover:shadow-md transition-all">
-																															  
-																			
+								 
+				   
                     <div class="flex justify-between items-center mb-2">
-																   
+				   
                         <span class="text-blue-500 font-bold">Day 2: 02/27 (五)</span>
-							  
-																				 
+		 
+					 
                         <span class="text-xs text-slate-400">點擊查看詳情 ></span>
-																										
-																																												
-							  
+						  
+											
+		 
                     </div>
-                    <h4 class="font-bold text-lg mb-1">周遊卡：大阪城梅花與道頓堀夜航 🎡</h4>
+                    <h4 class="font-bold text-lg mb-1 text-slate-800">周遊卡：大阪城梅花與道頓堀夜航 🎡</h4>
                     <p class="text-sm text-slate-500">大阪城、御座船、賞梅、聖瑪麗亞號、鰻魚午餐、晚間道頓堀觀光船。</p>
                 </div>
 
                 <!-- Day 3 Summary -->
                 <div onclick="showDay(3)" class="bg-white p-5 rounded-2xl shadow-sm border-l-8 border-yellow-500 cursor-pointer hover:shadow-md transition-all">
-																															  
-																			
+								 
+				   
                     <div class="flex justify-between items-center mb-2">
                         <span class="text-yellow-600 font-bold">Day 3: 02/28 (六)</span>
                         <span class="text-xs text-slate-400">點擊查看詳情 ></span>
+		 
+					   
 							  
-																				   
-																											   
                     </div>
-                    <h4 class="font-bold text-lg mb-1">購物：黑門市場、梅田與喬巴尋寶 🛍️</h4>
+                    <h4 class="font-bold text-lg mb-1 text-slate-800">購物：黑門市場、梅田與喬巴尋寶 🛍️</h4>
                     <p class="text-sm text-slate-500">黑門市場海鮮、梅田 LUCUA/大丸、空中庭園夕陽、Yukari 大阪燒。</p>
                 </div>
 
                 <!-- Day 4 Summary -->
-									  
-																															  
+		   
+								 
                 <div onclick="showDay(4)" class="bg-white p-5 rounded-2xl shadow-sm border-l-8 border-green-500 cursor-pointer hover:shadow-md transition-all">
-																																											  
-																																																																																																							
-							
+											 
+																									   
+	   
                     <div class="flex justify-between items-center mb-2">
-																   
+				   
                         <span class="text-green-600 font-bold">Day 4: 03/01 (日)</span>
                         <span class="text-xs text-slate-400">點擊查看詳情 ></span>
-																		
-																													
+				  
+							 
                     </div>
-                    <h4 class="font-bold text-lg mb-1">動漫：心齋橋甜點與阿倍野夜景 🏙️</h4>
+                    <h4 class="font-bold text-lg mb-1 text-slate-800">動漫：心齋橋甜點與阿倍野夜景 🏙️</h4>
                     <p class="text-sm text-slate-500">HARBS 水果千層、PARCO 喬巴店、八阪神社、日本橋挖寶、阿倍野夕陽。</p>
                 </div>
 
                 <!-- Day 5 Summary -->
                 <div onclick="showDay(5)" class="bg-white p-5 rounded-2xl shadow-sm border-l-8 border-slate-800 cursor-pointer hover:shadow-md transition-all">
-																															  
-																			
-																																																		   
-																																																																																																							
-							
+								 
+				   
+													 
+																									   
+	   
                     <div class="flex justify-between items-center mb-2">
-																   
+				   
                         <span class="text-slate-800 font-bold">Day 5: 03/02 (一)</span>
                         <span class="text-xs text-slate-400">點擊查看詳情 ></span>
-																
-																							
-																																	 
-							  
-																														 
+				
+					   
+								  
+		 
+							   
                     </div>
-                    <h4 class="font-bold text-lg mb-1">賦歸：木津市場早餐 🛫</h4>
+                    <h4 class="font-bold text-lg mb-1 text-slate-800">賦歸：木津市場早餐 🛫</h4>
                     <p class="text-sm text-slate-500">木津市場魚市食堂、Rapi:t 特急回機場、CI157 返回桃園。</p>
                 </div>
             </div>
@@ -352,7 +352,7 @@
         </section>
 
         <!-- DAY 2: 大阪周遊卡策略 (更新導航) -->
-        <section id="day2" class="day-content block text-slate-800">
+        <section id="day2" class="day-content hidden text-slate-800">
             <div class="bg-blue-50 p-4 rounded-xl mb-6 shadow-sm border border-blue-200">
                 <h3 class="text-blue-600 font-bold flex items-center">
                     <span class="activity-icon">🎡</span> 2026/02/27 (五) — 梅花、鰻魚與道頓堀
@@ -508,7 +508,7 @@
         </section>
 
         <!-- DAY 3: 梅田購物 & 喬巴尋寶 (核心詳細版) -->
-        <section id="day3" class="day-content block text-slate-800">
+        <section id="day3" class="day-content hidden text-slate-800">
             <div class="bg-yellow-50 p-4 rounded-xl mb-6 shadow-sm border border-yellow-200 text-slate-800">
                 <h3 class="text-yellow-600 font-bold flex items-center">
                     <span class="activity-icon">🛍️</span> 2026/02/28 (六) — 黑門與梅田血拚尋寶
@@ -754,7 +754,7 @@
         </section>
 
         <!-- DAY 4: 動漫、高空與拉麵 (詳細更新) -->
-        <section id="day4" class="day-content block text-slate-800">
+        <section id="day4" class="day-content hidden text-slate-800">
             <div class="bg-green-50 p-4 rounded-xl mb-6 shadow-sm border border-green-200">
                 <h3 class="text-green-600 font-bold flex items-center text-sm md:text-base">
                     Day 4: 2026/03/01 (日) — 甜點、動漫挖寶與高空日落之旅 🔒
@@ -903,7 +903,7 @@
         </section>        
 		
 		<!-- DAY 5: 賦歸之旅 (極致詳細版) -->
-        <section id="day5" class="day-content block text-slate-800">
+        <section id="day5" class="day-content hidden text-slate-800">
             <div class="bg-slate-800 text-white p-4 rounded-xl mb-6 shadow-md border border-slate-700">
                 <h3 class="font-bold flex items-center text-sm md:text-base">
                     Day 5: 2026/03/02 (一) — 木津市場早餐與 CI157 賦歸之旅 🔒
